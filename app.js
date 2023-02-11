@@ -8,6 +8,7 @@ const categoriesRoutes = require("./api/categories/categories.routes");
 const userRoutes = require("./api/users/users.routes");
 const recipesRoutes = require("./api/recipes/recipes.routes");
 const ingredientsRoutes = require("./api/ingredients/ingredients.routes");
+const resturantsRouters = require("./api/restaurants/restaurants.routes");
 
 const app = express();
 connectDb();
@@ -20,6 +21,7 @@ app.use(cors());
 app.use("/recipes", recipesRoutes);
 app.use("/categories", categoriesRoutes);
 app.use("/ingredients", ingredientsRoutes);
+app.use("/restaurants", resturantsRouters);
 app.use(userRoutes);
 app.use((req, res, next) => {
   const err = new Error("Not Found");
