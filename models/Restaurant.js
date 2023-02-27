@@ -2,7 +2,7 @@ const { model, Schema } = require("mongoose");
 
 const RestaurantSchema = new Schema({
   name: String,
-  //   logo: String,
+  logo: String,
   veg_type: String,
   category: String,
   cuisine: String,
@@ -13,7 +13,11 @@ const RestaurantSchema = new Schema({
   phone_number: String, //????
   location: String, //maybe x y coordinates?
   vegan_dishes: Number,
-  to_order_link: String, //??
+  to_order_link: String, //an array of links i think
+  whatsapp_link: String,
+  talabat_link: String,
+  website: String,
+  comment: String,
 
   slug: String,
   user: {

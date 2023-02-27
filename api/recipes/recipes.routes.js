@@ -6,9 +6,10 @@ const router = express.Router();
 const { getRecipes, recipeCreate } = require("./recipes.controllers");
 
 router.use((req, res, next) => {
-  if (req.method === "POST") {
-    req.body.slug = slugify(req.body.name);
-  }
+  console.log(req.body);
+  // if (req.method === "POST") {
+  //   req.body.slug = slugify(req.body.name);
+  // }
   next();
 });
 

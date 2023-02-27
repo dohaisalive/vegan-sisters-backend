@@ -9,6 +9,7 @@ const {
 } = require("./restaurants.controllers");
 
 router.use((req, res, next) => {
+  console.log(req.body);
   if (req.method === "POST") {
     req.body.slug = slugify(req.body.name);
   }
